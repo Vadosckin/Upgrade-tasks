@@ -21,14 +21,17 @@
     </div>
     <script>
         //создаем переменную с именем element и присваиваем ей первый HTML элемент div, который будет найдет в документе. 
-        let element = document.querySelector("div");
+        const elem = document.querySelector('div')
         
         //"вешаем" обработчик на событие click (клик левой клавишей мыши). 
         //При клике по HTML элементу, находящемуся в переменной element будет запускаться функция-обработчик.
         
-        element.addEventListener("click", function() {
-            element.innerText = "Привет мир!";  //для HTML элемента, который находится в переменной element меняем значение текста, который находится в элементе.
-        });
+        elem.addEventListener ('click', () => {
+            elem.innerText = 'Hello shady lady'
+        })
+        //для HTML элемента, который находится в переменной element меняем значение текста, который находится в элементе.
+
+        
     </script>
 </body>
 </html>
