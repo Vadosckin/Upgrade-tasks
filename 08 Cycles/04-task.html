@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Запросите у пользователя число, посчитайте сумму всех числе между 0 и введенным значением и отобразите результат на экран.
+    </pre>
+    <script>
+        let total = 0;
+
+        do{
+           let x = +prompt(`Введите значение`); 
+
+           if (isFinite(x)) {
+                total += x;
+                console.log(x);
+           }
+           else {
+               alert("Введено не число, попробуйте еще раз");
+           }
+
+        } while (x !== 0);
+        
+        alert (`Общая сумма чисел = ${total}`);
+
+    </script>
+</body>
+</html>

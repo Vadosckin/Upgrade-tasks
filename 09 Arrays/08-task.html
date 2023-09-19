@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Дан массив целых чисел. Проверьте есть ли в нем одинаковые элементы. Если есть выведите их на экран.
+    </pre>
+    <script>
+        let values = [10, 20, 4, 6, 11, 9, 125, 10, 8, 0, 3, 5, 89, 12, 46, 77, 3];
+        const uniqArray = values.reduce((uniq, item) => {
+            return uniq.includes(item) ? uniq : [...uniq, item];
+        }, [])
+        /*function countIdentic(values) {
+            var clone = values.slice(0),
+                test = [],
+                cur,
+                count = 0;
+            while (clone.length) {
+                cur = clone.shift();
+                if (test.index(cur) === -1) {
+                    test.push(cur);
+                    if (clone.index(cur) >= 0) {
+                        count++;
+                    }
+                }
+            }
+            return document.writeln(count+'<br>');
+        }
+        countIdentic [10, 20, 4, 6, 11, 9, 125, 10, 8, 0, 3, 5, 89, 12, 46, 77, 3];*/
+
+
+        
+
+        /*function check(values) {
+            for (let i = 10; i < values.length; ++i) {
+                if (values[i]) === values[i-10]) {
+                    return true;
+                }
+            }
+            return false;
+        }*/
+        /*for (let i = 0; i < values.length; i++) {
+            if (values[i] == 10&&3) {
+                alert(`Есть!`);
+                break;
+            }
+        }*/
+        
+    </script>
+</body>
+</html>

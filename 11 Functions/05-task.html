@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Создайте функцию, которая принимает массив значений и возвращает массив с дублирующимися значениями или null если повторяющихся значений в массиве нет.
+    </pre>
+    <script>
+
+        //Удаление дубликатов в значениях массива:
+        const values = ['html', 'css', 'js', 'css', 'html'];
+
+        function anliz(values) {
+            let result = [], obj = {}, e = 1;
+
+            for (let value of values){
+                let v = value.toLocaleLowerCase();
+                if (obj[v] !== e) {
+                    result.push(v);
+                    obj[v] = e;
+                }
+            }
+            return result;
+        }
+
+        console.log(anliz(values));
+
+        //Удаление дубликатов и сортировка значений массива:
+
+        let arr = [1, 2332, 22, 1, 64, 74, 55, 33, 64];
+
+        function eliminateDUplicates(arr){
+            let i,
+                len = arr.length,
+                out = [],
+                obj = {};
+            
+                for (i = 0; i < len; i++){
+                    obj[arr[i]] = 0;
+                }
+                for (i in obj){
+                    out.push(i);
+                }
+                return out;
+        }
+
+        console.log(eliminateDUplicates(arr));
+        
+        //Поиск дубликатов массива:
+
+        const names = ['Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Nancy', 'Carl', 'Adam'];
+
+        const count = names =>
+            names.reduce((a, b) => ({...a, [b]: (a[b] || 0) + 1 }), {})
+
+        const duplicates = dict =>
+            Object.keys(dict).filter((a) => dict[a] > 1)
+        console.log(count(names));
+        console.log(duplicates(count(names)));
+
+        //Более сложная версия поиска дубликатов массива:
+
+        /* let nams = ['Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Nancy', 'Carl']
+
+        let uniq = names
+        .map((nam) => {
+            return {
+            count: 1,
+            name: nam
+            }
+        })
+        .reduce((a, b) => {
+            a[b.nam] = (a[b.nam] || 0) + b.count
+            return a
+        }, {})
+
+        let duplicats = Object.keys(uniq).filter((a) => uniq[a] > 1)
+
+        console.log(duplicats);  */
+
+        arr = [20, 15, 10, 20];
+        
+        function randNumss(min, max){
+            let randoms = min + Math.random() * (max + 1 - min);
+            return Math.floor(randoms);
+        };
+        console.log(10 * randNumss(12, 2332));
+        
+    </script>
+</body>
+</html>

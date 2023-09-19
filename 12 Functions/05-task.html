@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task X</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Запросите у пользователя чилсо. Выведите все числа в обрантом поряке от введенного пользователем значения до 1. Используйте для решения рекурсию.
+    </pre>
+    <script>
+        
+        
+        
+        let numer = prompt("Введите число");
+
+        function sortByNumber(numer) {
+            return numer.sort(function(a, b) {
+                let A = 0;
+                B = 0;
+                if (a === b) {
+                    return 0;
+                }
+                for (let i = 0; i < numer.length; i++) {
+                    if (numer[i] == a) {
+                        A++;
+                    }
+                    if (numer[i] == b) {
+                        B++;
+                    }
+                }
+                return B - A;
+                
+            })
+        }
+
+        console.log(sortByNumber(numer));
+
+
+        /*function calcSumm(numOne, numTwo) {
+            let result = 1;
+
+            for (let i = 0; i < numTwo; i++) {
+                result *= numOne;
+            }
+            return result;
+        }
+        console.log(calcSumm(2, 3));*/
+
+        /*function calsSumm(numOne, numTwo) {
+            if (numTwo === 1) {
+                return numOne;
+            } else {
+                return numOne * calcSumm(numOne, numTwo - 1);
+            }
+        }
+        console.log(calcSumm(2, 3));*/
+
+    </script>
+</body>
+</html>
